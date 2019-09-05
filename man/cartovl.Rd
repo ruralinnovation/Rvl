@@ -2,10 +2,19 @@
 % Please edit documentation in R/cartovl.R
 \name{cartovl}
 \alias{cartovl}
-\title{<Add Title>}
+\title{Create a carto vl widget}
 \usage{
-cartovl(message, width = NULL, height = NULL, elementId = NULL)
+cartovl(message, width = NULL, height = NULL, element_id = NULL)
+}
+\arguments{
+\item{message}{message}
+
+\item{width}{width of the widget}
+
+\item{height}{height of the widget}
+
+\item{element_id}{explicit element id (usually not needed)}
 }
 \description{
-<Add Description>
+Create a carto vl widget
 }

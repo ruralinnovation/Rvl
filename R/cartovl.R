@@ -1,11 +1,14 @@
-#' <Add Title>
+#' Create a carto vl widget
 #'
-#' <Add Description>
+#' @param message message
+#' @param width width of the widget
+#' @param height height of the widget
+#' @param element_id explicit element id (usually not needed)
 #'
 #' @import htmlwidgets
 #'
 #' @export
-cartovl <- function(message, width = NULL, height = NULL, elementId = NULL) {
+cartovl <- function(message, width = NULL, height = NULL, element_id = NULL) {
 
   # forward options using x
   x = list(
@@ -19,7 +22,7 @@ cartovl <- function(message, width = NULL, height = NULL, elementId = NULL) {
     width = width,
     height = height,
     package = 'cartovl',
-    elementId = elementId
+    elementId = element_id
   )
 }
 
