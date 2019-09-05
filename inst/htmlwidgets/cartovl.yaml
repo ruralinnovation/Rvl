@@ -1,7 +1,11 @@
 # (uncomment to add a dependency)
-# dependencies:
-#  - name:
-#    version:
-#    src:
-#    script:
-#    stylesheet:
+dependencies:
+  - name: carto-vl
+    version: 1.4.1
+    src: htmlwidgets/lib/carto-vl
+    script: carto-vl.min.js
+  - name: mapbox-gl
+    version: 1.0.0
+    src: htmlwidgets/lib/mapbox-gl
+    script: mapbox-gl.js
+    stylesheet: mapbox-gl.css
