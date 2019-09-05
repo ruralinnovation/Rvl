@@ -5,7 +5,8 @@ Authors@R: person("Stefan", "Kuethe", email = "crazycapivara@gmail.com", role = 
 Description: Makes 'carto-vl' available within R via the 'htmlwidgets' package.
 License: MIT + file LICENSE
 Imports:
-  htmlwidgets
+  htmlwidgets,
+  magrittr
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1

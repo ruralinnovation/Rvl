@@ -2,13 +2,12 @@
 % Please edit documentation in R/cartovl.R
 \name{cartovl}
 \alias{cartovl}
-\title{Create a carto vl widget}
+\title{Create a carto vl (map) widget}
 \usage{
-cartovl(message, width = NULL, height = NULL, element_id = NULL)
+cartovl(properties = map_properties(), width = NULL, height = NULL,
+  element_id = NULL)
 }
 \arguments{
-\item{message}{message}
-
 \item{width}{width of the widget}
 
 \item{height}{height of the widget}
@@ -16,5 +15,5 @@ cartovl(message, width = NULL, height = NULL, element_id = NULL)
 \item{element_id}{explicit element id (usually not needed)}
 }
 \description{
-Create a carto vl widget
+Create a carto vl (map) widget
 }

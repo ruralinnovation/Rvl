@@ -1,6 +1,5 @@
-#' Create a carto vl widget
+#' Create a carto vl (map) widget
 #'
-#' @param message message
 #' @param width width of the widget
 #' @param height height of the widget
 #' @param element_id explicit element id (usually not needed)
@@ -8,11 +7,12 @@
 #' @import htmlwidgets
 #'
 #' @export
-cartovl <- function(message, width = NULL, height = NULL, element_id = NULL) {
+cartovl <- function(properties = map_properties(), width = NULL, height = NULL, element_id = NULL) {
 
   # forward options using x
   x = list(
-    message = message
+    mapProperties = properties,
+    layers = list()
   )
 
   # create widget
