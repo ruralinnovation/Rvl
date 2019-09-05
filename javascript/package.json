@@ -1,0 +1,16 @@
+{
+  "name": "cartovlwidget",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "build": "webpack src/index.js --mode production -o ../inst/htmlwidgets/cartovl.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Kuethe",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.39.3",
+    "webpack-cli": "^3.3.7"
+  }
+}
