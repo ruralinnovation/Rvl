@@ -2,12 +2,13 @@ library(geojsonio)
 library(cartovl)
 
 sample_data <- geojson_json(quakes)
-viz_def <- c(
+viz_def <- list(
   "color: green",
-  "width: 15"
+  "width: 5"
 )
 
-map <- cartovl(properties = map_properties(center = c(175.1982, 21.1790))) %>%
+map <- cartovl() %>%
+  set_view(176.9, -24.655, 2) %>%
   add_layer(sample_data, viz_def)
 
 if (interactive()) map
