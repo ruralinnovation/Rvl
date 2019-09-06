@@ -3,7 +3,7 @@
 An R Interface to carto-vl
 ==========================
 
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![Travis build status](https://travis-ci.org/crazycapivara/cartovl.svg?branch=master)](https://travis-ci.org/crazycapivara/cartovl) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
 Cartovl for R makes the open-source JavaScript library [carto-vl](https://carto.com/developers/carto-vl/) available within R via the [htmlwidgets](https://www.htmlwidgets.org/) package.
 
