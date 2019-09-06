@@ -2,6 +2,7 @@ library(geojsonio)
 library(cartovl)
 
 sample_data <- geojson_json(quakes)
+
 viz_def <- list(
   "color: green",
   "width: 5"

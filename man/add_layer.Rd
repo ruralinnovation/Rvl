@@ -2,11 +2,13 @@
 % Please edit documentation in R/layer.R
 \name{add_layer}
 \alias{add_layer}
-\title{Add layer to map widget}
+\title{Add a layer to the map}
 \usage{
-add_layer(map, data, viz_def = NULL, id = "layer")
+add_layer(map, data, viz_def = list(), id = "layer")
 }
 \arguments{
+\item{map}{map widget}
+
 \item{data}{data (geojson)}
 
 \item{viz_def}{visualization definition, character vector; if set to \code{NULL}
@@ -15,5 +17,5 @@ a default style will be applied}
 \item{id}{unique layer id}
 }
 \description{
-Add layer to map widget
+Add a layer to the map
 }

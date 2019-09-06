@@ -7,8 +7,13 @@ map_properties <- function(style = "https://basemaps.cartocdn.com/gl/dark-matter
   )
 }
 
+#' Set the view of the map
+#'
+#' @param longitude longitude
+#' @param latitude latitude
+#' @param zoom zoom
 #' @export
-set_view <- function(map, longitude, latitude, zoom) {
+set_view <- function(map, longitude, latitude, zoom = 2) {
   map$x$mapProperties <- modifyList(
     map$x$mapProperties,
     list(
