@@ -23,12 +23,13 @@ map_properties <- function(
 #' @param zoom zoom
 #' @export
 set_view <- function(map, longitude, latitude, zoom = 2) {
-  map$x$mapProperties <- utils::modifyList(
-    map$x$mapProperties,
-    list(
-      center = c(longitude, latitude),
-      zoom = zoom
-    )
-  )
-  map
+  #map$x$mapProperties <- utils::modifyList(
+  #  map$x$mapProperties,
+  #  list(
+  #    center = c(longitude, latitude),
+  #    zoom = zoom
+  #  )
+  #)
+  #map
+  modify_map_parameters(map, center = c(longitude, latitude), zoom = zoom)
 }
