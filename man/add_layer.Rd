@@ -4,10 +4,13 @@
 \alias{add_layer}
 \title{Add layer to map widget}
 \usage{
-add_layer(map, data, id = "layer")
+add_layer(map, data, viz_def = NULL, id = "layer")
 }
 \arguments{
 \item{data}{data (geojson)}
+
+\item{viz_def}{visualization definition, character vector; if set to \code{NULL}
+a default style will be applied}
 
 \item{id}{unique layer id}
 }
