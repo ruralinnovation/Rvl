@@ -6,12 +6,5 @@
 #'
 #' @export
 add_mapbox_basemap <- function(map, token = Sys.getenv("MAPBOX_API_TOKEN"), style = "mapbox://styles/mapbox/light-v9") {
-  #map$x$mapProperties <- utils::modifyList(
-  #  map$x$mapProperties,
-  #  list(
-  #    style = style,
-  #    mapboxAccessToken = token
-  #  )
-  #)
   modify_map_parameters(map, style = style, mapboxAccessToken = token)
 }
