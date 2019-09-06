@@ -11,18 +11,18 @@
 cartovl <- function(properties = map_properties(), width = NULL, height = NULL, element_id = NULL) {
 
   # forward options using x
-  x = list(
+  x <- list(
     mapProperties = properties,
     layers = list()
   )
 
   # create widget
   htmlwidgets::createWidget(
-    name = 'cartovl',
+    name = "cartovl",
     x,
     width = width,
     height = height,
-    package = 'cartovl',
+    package = "cartovl",
     elementId = element_id
   )
 }
@@ -44,13 +44,15 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
 #' @name cartovl-shiny
 #'
 #' @export
-cartovlOutput <- function(outputId, width = '100%', height = '400px'){
-  htmlwidgets::shinyWidgetOutput(outputId, 'cartovl', width, height, package = 'cartovl')
+cartovlOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "cartovl")
 }
 
 #' @rdname cartovl-shiny
 #' @export
 renderCartovl <- function(expr, env = parent.frame(), quoted = FALSE) {
-  if (!quoted) { expr <- substitute(expr) } # force quoted
+  if (!quoted) {
+    expr <- substitute(expr)
+  } # force quoted
   htmlwidgets::shinyRenderWidget(expr, cartovlOutput, env, quoted = TRUE)
 }
