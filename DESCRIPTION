@@ -1,6 +1,6 @@
 Package: cartovl
 Title: An R Interface to 'carto-vl'
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: person("Stefan", "Kuethe", email = "crazycapivara@gmail.com", role = c("aut", "cre"))
 Description: Makes 'carto-vl' available within R via the 'htmlwidgets' package.
 License: MIT + file LICENSE
