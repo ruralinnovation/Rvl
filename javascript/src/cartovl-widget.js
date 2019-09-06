@@ -11,7 +11,7 @@ export default function(widgetElement, width, height) {
     console.log(widgetData);
     logVersions();
 
-    // widgetElement.innerText = widgetData.message;
+    mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
 
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
     const layers = _cartoVLWidget.layers = makeLayers(widgetData.layers);
