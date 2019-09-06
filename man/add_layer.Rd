@@ -7,7 +7,7 @@
 add_layer(map, data, viz_def = list(), id = "layer")
 }
 \arguments{
-\item{map}{map widget}
+\item{map}{map widget created by \link{cartovl}}
 
 \item{data}{data (geojson)}
 

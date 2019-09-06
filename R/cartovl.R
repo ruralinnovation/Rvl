@@ -1,5 +1,6 @@
-#' Create a carto vl (map) widget
+#' Create a cartovl (map) widget
 #'
+#' @param properties properties passed to \code{mapboxgl.Map}
 #' @param width width of the widget
 #' @param height height of the widget
 #' @param element_id explicit element id (usually not needed)

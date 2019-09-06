@@ -1,6 +1,6 @@
 #' Add a layer to the map
 #'
-#' @param map map widget
+#' @param map map widget created by \link{cartovl}
 #' @param data data (geojson)
 #' @param viz_def visualization definition, character vector; if set to \code{NULL}
 #'   a default style will be applied

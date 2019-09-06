@@ -2,12 +2,14 @@
 % Please edit documentation in R/cartovl.R
 \name{cartovl}
 \alias{cartovl}
-\title{Create a carto vl (map) widget}
+\title{Create a cartovl (map) widget}
 \usage{
 cartovl(properties = map_properties(), width = NULL, height = NULL,
   element_id = NULL)
 }
 \arguments{
+\item{properties}{properties passed to \code{mapboxgl.Map}}
+
 \item{width}{width of the widget}
 
 \item{height}{height of the widget}
@@ -15,5 +17,5 @@ cartovl(properties = map_properties(), width = NULL, height = NULL,
 \item{element_id}{explicit element id (usually not needed)}
 }
 \description{
-Create a carto vl (map) widget
+Create a cartovl (map) widget
 }
