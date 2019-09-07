@@ -11,7 +11,8 @@ add_layer <- function(map, data, viz_def = list(), id = "layer") {
   map$x$layers[[n + 1]] <- list(
     data = data,
     vizDef = viz_def,
-    id = id
+    id = id,
+    df = inherits(data, "data.frame")
   )
   map
 }
