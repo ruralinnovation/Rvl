@@ -1,6 +1,8 @@
 import makeLayers from "./make-layers";
+// import df2geojson from "./helpers/df2geojson";
 
-global._cartoVLWidget = {};
+const _cartoVLWidget = global._cartoVLWidget = {};
+// _cartoVLWidget.df2geojson = df2geojson;
 
 export default function(widgetElement, width, height) {
   var widget = {};
