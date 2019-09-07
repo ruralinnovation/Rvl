@@ -11,6 +11,7 @@ viz_def <- list(
 )
 
 map <- cartovl() %>%
+  add_navigation_control(showCompass = FALSE) %>%
   set_view(-79.89042, 35.23582, 6) %>%
   add_layer(nc_geojson, viz_def)
 
