@@ -1,8 +1,7 @@
+import backgroundStyle from "./background-style";
 import makeLayers from "./make-layers";
-// import df2geojson from "./helpers/df2geojson";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
-// _cartoVLWidget.df2geojson = df2geojson;
 
 export default function(widgetElement, width, height) {
   const widget = {};
@@ -36,13 +35,14 @@ const logVersions = function() {
 const makeMap = function(elementId, properties) {
   const map = new mapboxgl.Map({
     container: elementId,
-    style: properties.style || MAP_BACKGROUND, // carto.basemaps.voyager,
+    style: properties.style || backgroundStyle("black"), // carto.basemaps.voyager,
     center: properties.center || [0, 30],
     zoom: properties.zoom || 2
   });
   return map;
 };
 
+/*
 const MAP_BACKGROUND = {
   version: 8,
   sources: { },
@@ -54,6 +54,7 @@ const MAP_BACKGROUND = {
     }
   ]
 };
+*/
 
 const addNavigationControlTo = function(map, props, position) {
   const navControl = new mapboxgl.NavigationControl(props);
