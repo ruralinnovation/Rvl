@@ -5,9 +5,10 @@ export default function(layers) {
     if (layer.props.df) {
       layer.data = df2geojson(layer.data, layer.props);
     }
-    let source = new carto.source.GeoJSON(layer.data);
+
+    const source = new carto.source.GeoJSON(layer.data);
     layer.vizDef = layer.vizDef || [];
-    let viz = new carto.Viz(layer.vizDef.join("\n"));
+    const viz = new carto.Viz(layer.vizDef.join("\n"));
     return new carto.Layer(layer.id, source, viz);
   });
 }
