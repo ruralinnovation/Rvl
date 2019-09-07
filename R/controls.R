@@ -1,14 +1,16 @@
-#' Add navigation control to the map
+#' Add a control to the map
 #'
 #' @inheritParams add_layer
+#' @param name name of the control
 #' @param position position on the map
-#' @param ... more options passed to the navigation control
-#'
+#' @param ... options passed to the control
 #' @export
-add_navigation_control <- function(map, position = "top-left", ...) {
-  map$x$controls$nav <- list(
-    position = position,
-    props = list(...)
+add_control <- function(map, name = "NavigationControl", position = "top-left", ...) {
+  n <- length(map$x$controls)
+  map$x$controls[[n + 1]] <- list(
+    name = name,
+    props = list(...),
+    position = position
   )
   map
 }
