@@ -2,8 +2,8 @@ import df2geojson from "./helpers/df2geojson";
 
 export default function(layers) {
   return layers.map((layer) => {
-    if (layer.df) {
-      layer.data = df2geojson(layer.data, layer.longitude, layer.latitude);
+    if (layer.props.df) {
+      layer.data = df2geojson(layer.data, layer.props);
     }
     let source = new carto.source.GeoJSON(layer.data);
     layer.vizDef = layer.vizDef || [];

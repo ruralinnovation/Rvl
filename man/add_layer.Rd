@@ -4,7 +4,7 @@
 \alias{add_layer}
 \title{Add a layer to the map}
 \usage{
-add_layer(map, data, viz_def = list(), id = "layer")
+add_layer(map, data, viz_def = list(), id = "layer", ...)
 }
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
@@ -15,6 +15,8 @@ add_layer(map, data, viz_def = list(), id = "layer")
 a default style will be applied}
 
 \item{id}{unique layer id}
+
+\item{...}{more props}
 }
 \description{
 Add a layer to the map

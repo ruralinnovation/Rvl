@@ -1,6 +1,6 @@
-export default function(data, longitude, latitude) {
-  longitude = longitude || "lng";
-  latitude = latitude || "lat";
+export default function(data, props) {
+  const longitude = props.longitude || "lng";
+  const latitude = props.latitude || "lat";
   const geojson = {
     type: "FeatureCollection",
     features: []
