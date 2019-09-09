@@ -1,7 +1,7 @@
 import df2geojson from "./helpers/df2geojson";
 
 export default function(layers) {
-  return layers.map((layer) => {
+  return layers.map(layer => {
     if (layer.props.df) {
       layer.data = df2geojson(layer.data, layer.props);
     }

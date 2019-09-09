@@ -1,7 +1,7 @@
-import cartovlWidget from "./cartovl-widget";
+import cartoVLWidget from "./cartovl-widget";
 
 HTMLWidgets.widget({
   name: 'cartovl',
   type: 'output',
-  factory: cartovlWidget
+  factory: cartoVLWidget
 });

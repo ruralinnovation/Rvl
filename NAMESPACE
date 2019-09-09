@@ -2,6 +2,7 @@
 
 export("%>%")
 export(add_carto_basemap)
+export(add_control)
 export(add_layer)
 export(add_mapbox_basemap)
 export(cartovl)

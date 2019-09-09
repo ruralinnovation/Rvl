@@ -13,6 +13,7 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
   # forward options using x
   x <- list(
     mapProperties = properties,
+    controls = list(),
     layers = list()
   )
 
