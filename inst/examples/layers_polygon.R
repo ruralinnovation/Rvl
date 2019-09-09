@@ -7,7 +7,8 @@ nc_geojson <- system.file("shape/nc.shp", package = "sf") %>%
   geojson_json()
 
 viz_def <- list(
-  "color: ramp($AREA, [midnightblue, gold])"
+  "color: ramp($AREA, [midnightblue, gold])",
+  "filter: $AREA > 0.16"
 )
 
 map <- cartovl() %>%

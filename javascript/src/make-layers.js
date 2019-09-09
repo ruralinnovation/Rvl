@@ -9,6 +9,17 @@ export default function(layers) {
     const source = new carto.source.GeoJSON(layer.data);
     layer.vizDef = layer.vizDef || [];
     const viz = new carto.Viz(layer.vizDef.join("\n"));
-    return new carto.Layer(layer.id, source, viz);
+    const cartoLayer = new carto.Layer(layer.id, source, viz);
+
+    // TEST interactivity
+    if (layer.props.popup) {
+      const interactivity = new carto.Interactivity(cartoLayer);
+        interactivity.on("featureClick", e => {
+        const feature = e.features[0];
+        console.log(feature.variables.popup.value); // needs popup variable to be set
+      });
+    }
+
+    return cartoLayer;
   });
 }
