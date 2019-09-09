@@ -1,6 +1,6 @@
 import df2geojson from "./helpers/df2geojson";
 
-export default function(layers) {
+export default function(map, layers) {
   return layers.map(layer => {
     if (layer.props.df) {
       layer.data = df2geojson(layer.data, layer.props);
@@ -14,9 +14,19 @@ export default function(layers) {
     // TEST interactivity
     if (layer.props.popup) {
       const interactivity = new carto.Interactivity(cartoLayer);
-        interactivity.on("featureClick", e => {
+      interactivity.on("featureClick", e => {
         const feature = e.features[0];
-        console.log(feature.variables.popup.value); // needs popup variable to be set
+        if (!feature) return;
+
+        const value = feature.variables.popup.value; // needs popup variable to be set
+        console.log(value);
+
+        // create popup
+        const coords = e.coordinates;
+        new mapboxgl.Popup(value)
+          .setLngLat([coords.lng, coords.lat])
+          .setHTML(value)
+          .addTo(map);
       });
     }
 

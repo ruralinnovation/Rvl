@@ -14,7 +14,9 @@ export default function(widgetElement, width, height) {
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
     addControls(map, widgetData.controls);
-    const layers = _cartoVLWidget.layers = makeLayers(widgetData.layers);
+    const layers = _cartoVLWidget.layers = makeLayers(map, widgetData.layers);
+
+    // TODO: add layers in 'makeLayers' func
     layers.forEach(layer => layer.addTo(map));
   };
 
