@@ -19,15 +19,20 @@ export default function(map, layers) {
         if (!feature) return;
 
         const keys = Object.keys(feature.variables);
+        /*
         const values = keys.map(key => feature.variables[key].value);
         const value = `<h2>${keys[0]}</h2><p>${values[0]}</p>`; // feature.variables.popup.value; // needs popup variable to be set
         console.log(value);
+        */
+
+        const html = keys.map(key => `<h1>${key}</h1><p>${feature.variables[key].value}</p>`);
+        console.log(html);
 
         // create popup
         const coords = e.coordinates;
-        new mapboxgl.Popup(value)
+        new mapboxgl.Popup()
           .setLngLat([coords.lng, coords.lat])
-          .setHTML(value)
+          .setHTML(html.join("\n"))
           .addTo(map);
       });
     }
