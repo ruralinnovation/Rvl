@@ -18,17 +18,7 @@ export default function(map, layers) {
         const feature = e.features[0];
         if (!feature) return;
 
-        // const keys = Object.keys(feature.variables);
-        /*
-        const values = keys.map(key => feature.variables[key].value);
-        const value = `<h2>${keys[0]}</h2><p>${values[0]}</p>`; // feature.variables.popup.value; // needs popup variable to be set
-        console.log(value);
-        */
-
-        // const html = keys.map(key => `<h1>${key}</h1><p>${feature.variables[key].value}</p>`);
-        // console.log(html);
-
-        const html = makePopupContent(feature);
+        const html = feature.variables.popup ? [feature.variables.popup.value] : makePopupContent(feature);
         console.log(html);
 
         // create popup
