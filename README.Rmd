@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 [![Travis build status](https://travis-ci.org/crazycapivara/cartovl.svg?branch=master)](https://travis-ci.org/crazycapivara/cartovl)
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 
-Cartovl for R makes the open-source JavaScript library [carto-vl](https://carto.com/developers/carto-vl/) available within R via the [htmlwidgets](https://www.htmlwidgets.org/) package.
+Cartovl for R makes [carto-vl](https://carto.com/developers/carto-vl/), an open source JavaScript library to create vector-based visualizations on top of [mapbox-gl](https://docs.mapbox.com/mapbox-gl-js/api/), available within R via the [htmlwidgets](https://www.htmlwidgets.org/) package.
 
 ## Notes
 
