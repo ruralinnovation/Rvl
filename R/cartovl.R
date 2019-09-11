@@ -14,7 +14,8 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
   x <- list(
     mapProperties = properties,
     controls = list(),
-    layers = list()
+    layers = list(),
+    calls = list()
   )
 
   # create widget
