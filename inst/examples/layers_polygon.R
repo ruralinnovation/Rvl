@@ -16,6 +16,7 @@ map <- cartovl() %>%
   add_source(nc_geojson) %>%
   add_control("NavigationControl", showCompass = FALSE) %>%
   set_view(-79.89042, 35.23582, 6) %>%
-  add_layer(nc_geojson, viz_def, popup = TRUE)
+  add_carto_layer(nc_geojson, viz_def, popup = TRUE)
+  # add_layer(nc_geojson, viz_def, popup = TRUE)
 
 if (interactive()) map

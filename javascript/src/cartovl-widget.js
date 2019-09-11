@@ -1,9 +1,12 @@
 import backgroundStyle from "./background-style";
 import makeLayers from "./make-layers";
+import addLayer from "./add-layer";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
-const methods = {};
+const methods = _cartoVLWidget.methods = {};
+
+methods.addLayer = addLayer;
 
 methods.addControl = function(className, props, position) {
   let map = this;
