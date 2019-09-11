@@ -19,7 +19,15 @@ export function addMapboxLayer(style) {
 
 export function addLayer(data, vizDef, props) {
   let map = this;
-  if (props.df) data = df2geojson(data, props);
+  if (props.df) {
+    data = df2geojson(data, props);
+  }
+  /* map needs to be loaded
+  else if (typeof data === "string") {
+    console.log("data", data);
+    data = map.getSource(data);
+  }
+  */
 
   const source = new carto.source.GeoJSON(data);
   // vizDef = vizDef || []; // TODO: needed?
