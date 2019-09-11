@@ -5,7 +5,17 @@ const makePopupContent = function(feature) {
   return keys.map(key => `<h1>${key}</h1><p>${feature.variables[key].value}</p>`);
 };
 
-export default function(data, vizDef, id, props) {
+export function addMapboxSource(data, id) {
+  let map = this;
+  map.on("load", () => map.addSource(id, { type: "geojson", data: data }));
+}
+
+export function addMapboxLayer(style) {
+  let map = this;
+  map.on("load", () => map.addLayer(style));
+}
+
+export function addLayer(data, vizDef, id, props) {
   let map = this;
   if (props.df) data = df2geojson(data, props);
 

@@ -1,27 +1,26 @@
 import backgroundStyle from "./background-style";
 import makeLayers from "./make-layers";
-import addLayer from "./add-layer";
+import { addMapboxSource, addMapboxLayer, addLayer } from "./layer";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
-const methods = _cartoVLWidget.methods = {};
-
-methods.addLayer = addLayer;
+const methods = _cartoVLWidget.methods = {
+  addLayer: addLayer,
+  addMapboxSource: addMapboxSource,
+  addMapboxLayer: addMapboxLayer
+};
 
 methods.addControl = function(className, props, position) {
   let map = this;
   map.addControl(new mapboxgl[className](props), position || "top-left");
 };
 
-methods.addMapboxSource = function(data, id) {
-  let map = this;
-  map.on("load", () => map.addSource(id, { type: "geojson", data: data }));
-};
-
+/*
 methods.addMapboxLayer = function(style) {
   let map = this;
   map.on("load", () => map.addLayer(style));
 };
+*/
 
 export default function(widgetElement, width, height) {
   const widget = {};
@@ -33,6 +32,7 @@ export default function(widgetElement, width, height) {
     logVersions();
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
+    // TODO: obsolete
     const layers = _cartoVLWidget.layers = makeLayers(map, widgetData.layers);
 
     // TODO: add layers in 'makeLayers' func
