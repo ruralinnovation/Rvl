@@ -19,15 +19,14 @@ export function addMapboxLayer(style) {
 
 export function addLayer(data, vizDef, props) {
   let map = this;
+  map.on("load", () => {
+  // start
   if (props.df) {
     data = df2geojson(data, props);
+  } else if (typeof data === "string") {
+      console.log("data", data);
+      data = map.getSource(data)._data;
   }
-  /* map needs to be loaded
-  else if (typeof data === "string") {
-    console.log("data", data);
-    data = map.getSource(data);
-  }
-  */
 
   const source = new carto.source.GeoJSON(data);
   // vizDef = vizDef || []; // TODO: needed?
@@ -53,6 +52,9 @@ export function addLayer(data, vizDef, props) {
     });
   }
 
-  map.on("load", () => map.addLayer(cartoLayer));
+  // map.on("load", () => map.addLayer(cartoLayer));
+  map.addLayer(cartoLayer);
+  // end
+  });
   // return cartoLayer;
 }
