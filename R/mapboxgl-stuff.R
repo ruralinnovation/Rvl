@@ -14,8 +14,3 @@ add_mapbox_layer <- function(map, source_name, style, id = "mapbox-layer") {
   )
   invoke_method(map, "addMapboxLayer", style)
 }
-
-#' @export
-add_control2 <- function(map, name = "NavigationControl", position = "top-left", ...) {
-  invoke_method(map, "addControl", name, list(...), position)
-}

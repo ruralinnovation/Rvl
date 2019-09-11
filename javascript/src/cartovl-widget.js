@@ -30,7 +30,7 @@ export default function(widgetElement, width, height) {
     logVersions();
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
-    addControls(map, widgetData.controls);
+    // addControls(map, widgetData.controls);
     const layers = _cartoVLWidget.layers = makeLayers(map, widgetData.layers);
 
     // TODO: add layers in 'makeLayers' func
@@ -60,8 +60,10 @@ const makeMap = function(elementId, properties) {
   return map;
 };
 
+/*
 const addControls = function(map, controls) {
   controls.forEach(control => {
     map.addControl(new mapboxgl[control.name](control.props), control.position || "top-left");
   });
 };
+*/
