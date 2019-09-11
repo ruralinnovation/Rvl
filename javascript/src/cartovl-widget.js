@@ -15,13 +15,6 @@ methods.addControl = function(className, props, position) {
   map.addControl(new mapboxgl[className](props), position || "top-left");
 };
 
-/*
-methods.addMapboxLayer = function(style) {
-  let map = this;
-  map.on("load", () => map.addLayer(style));
-};
-*/
-
 export default function(widgetElement, width, height) {
   const widget = {};
 

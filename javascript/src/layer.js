@@ -5,9 +5,11 @@ const makePopupContent = function(feature) {
   return keys.map(key => `<h1>${key}</h1><p>${feature.variables[key].value}</p>`);
 };
 
-export function addMapboxSource(data, id) {
+export function addMapboxSource(data, props) {
   let map = this;
-  map.on("load", () => map.addSource(id, { type: "geojson", data: data }));
+  if (props.df) data = df2geojson(data, props);
+
+  map.on("load", () => map.addSource(props.id, { type: "geojson", data: data }));
 }
 
 export function addMapboxLayer(style) {
@@ -15,14 +17,14 @@ export function addMapboxLayer(style) {
   map.on("load", () => map.addLayer(style));
 }
 
-export function addLayer(data, vizDef, id, props) {
+export function addLayer(data, vizDef, props) {
   let map = this;
   if (props.df) data = df2geojson(data, props);
 
   const source = new carto.source.GeoJSON(data);
   // vizDef = vizDef || []; // TODO: needed?
   const viz = new carto.Viz(vizDef.join("\n"));
-  const cartoLayer = new carto.Layer(id, source, viz);
+  const cartoLayer = new carto.Layer(props.id, source, viz);
 
   // Interactivity
   if (props.popup) {

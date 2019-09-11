@@ -1,4 +1,13 @@
-### TODO: Rename to 'add_carto_layer'
+add_layer_ <- function(map, data, viz_def = list(), id = "layer", ...) {
+  n <- length(map$x$layers)
+  map$x$layers[[n + 1]] <- list(
+    data = data,
+    vizDef = viz_def,
+    id = id,
+    props = list(..., df = inherits(data, "data.frame"))
+  )
+  map
+}
 #' Add a layer to the map
 #'
 #' @param map map widget created by \link{cartovl}
@@ -9,17 +18,10 @@
 #' @param ... more props
 #' @export
 add_layer <- function(map, data, viz_def = list(), id = "layer", ...) {
-  n <- length(map$x$layers)
-  map$x$layers[[n + 1]] <- list(
-    data = data,
-    vizDef = viz_def,
+  props <- list(
     id = id,
-    props = list(..., df = inherits(data, "data.frame"))
+    df = inherits(data, "data.frame"),
+    ...
   )
-  map
-}
-
-#' @export
-add_carto_layer <- function(map, data, viz_def = list(), id = "layer", ...) {
-  invoke_method(map, "addLayer", data, viz_def, id, list(...))
+  invoke_method(map, "addLayer", data, viz_def, props)
 }

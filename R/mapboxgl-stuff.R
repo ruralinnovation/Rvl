@@ -1,6 +1,11 @@
 #' @export
-add_source <- function(map, data, id = "source") {
-  invoke_method(map, "addMapboxSource", data, id)
+add_source <- function(map, data, id = "source", ...) {
+  props <- list(
+    id = id,
+    df = inherits(data, "data.frame"),
+    ...
+  )
+  invoke_method(map, "addMapboxSource", data, props)
 }
 
 #' @export

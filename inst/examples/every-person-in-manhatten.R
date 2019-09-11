@@ -12,11 +12,12 @@ persons <- data_url %>%
   as_tibble() %>%
   set_names(c("lng", "lat", "sex"))
 
-persons_geojson <- geojsonio::geojson_json(persons)
+# persons_geojson <- geojsonio::geojson_json(persons)
 
 cartovl() %>%
   set_view(-73.985130, 40.758896, 11) %>%
   add_layer(
-    data = persons_geojson,
+    # data = persons_geojson,
+    data = persons,
     viz_def = list("color: ramp($sex, [red, blue])")
   )
