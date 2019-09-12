@@ -1,9 +1,9 @@
 import backgroundStyle from "./background-style";
-// import makeLayers from "./make-layers";
 import { addMapboxSource, addMapboxLayer, addLayer } from "./layer";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
+// TODO: methods do not need to global
 const methods = _cartoVLWidget.methods = {
   addLayer: addLayer,
   addMapboxSource: addMapboxSource,
@@ -25,11 +25,6 @@ export default function(widgetElement, width, height) {
     logVersions();
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
-    // TODO: obsolete
-    // const layers = _cartoVLWidget.layers = makeLayers(map, widgetData.layers);
-
-    // TODO: add layers in 'makeLayers' func
-    // layers.forEach(layer => layer.addTo(map));
 
     // call methods
     widgetData.calls.forEach(call => methods[call.name].apply(map, call.args));
