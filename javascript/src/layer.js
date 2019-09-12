@@ -17,7 +17,7 @@ export function addMapboxLayer(style) {
   map.on("load", () => map.addLayer(style));
 }
 
-export function addLayer(data, vizDef, props) {
+export function addLayer(data, props) {
   let map = this;
   map.on("load", () => {
   // start
@@ -30,8 +30,9 @@ export function addLayer(data, vizDef, props) {
 
   const source = new carto.source.GeoJSON(data);
   // vizDef = vizDef || []; // TODO: needed?
-  const viz = new carto.Viz(vizDef.join("\n"));
+  const viz = new carto.Viz(props.vizDef.join("\n"));
   const cartoLayer = new carto.Layer(props.id, source, viz);
+  console.log("cartoLayer", cartoLayer);
 
   // Interactivity
   if (props.popup) {
@@ -53,7 +54,8 @@ export function addLayer(data, vizDef, props) {
   }
 
   // map.on("load", () => map.addLayer(cartoLayer));
-  map.addLayer(cartoLayer);
+  // map.addLayer(cartoLayer);
+  cartoLayer.addTo(map);
   // end
   });
   // return cartoLayer;

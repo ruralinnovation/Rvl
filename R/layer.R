@@ -20,8 +20,9 @@ add_layer_ <- function(map, data, viz_def = list(), id = "layer", ...) {
 add_layer <- function(map, data, viz_def = list(), id = "layer", ...) {
   props <- list(
     id = id,
+    vizDef = viz_def,
     df = inherits(data, "data.frame"),
     ...
   )
-  invoke_method(map, "addLayer", data, viz_def, props)
+  invoke_method(map, "addLayer", data, props)
 }
