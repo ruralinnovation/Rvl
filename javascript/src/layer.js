@@ -20,6 +20,21 @@ export function addMapboxLayer(style) {
 export function addLayer(data, props) {
   let map = this;
   map.on("load", () => {
+    if (props.df) {
+      data = df2geojson(data, props);
+    } else if (typeof data === "string") {
+      data = map.getSource(data)._data;
+    }
+
+    const layer = makeLayer(map, data, props);
+    layer.addTo(map);
+  });
+}
+
+const makeLayer = function(map, data, props) {
+  /*
+  let map = this;
+  map.on("load", () => {
   // start
   if (props.df) {
     data = df2geojson(data, props);
@@ -27,12 +42,13 @@ export function addLayer(data, props) {
       console.log("data", data);
       data = map.getSource(data)._data;
   }
+  */
 
   const source = new carto.source.GeoJSON(data);
   // vizDef = vizDef || []; // TODO: needed?
   const viz = new carto.Viz(props.vizDef.join("\n"));
   const cartoLayer = new carto.Layer(props.id, source, viz);
-  console.log("cartoLayer", cartoLayer);
+  // console.log("cartoLayer", cartoLayer);
 
   // Interactivity
   if (props.popup) {
@@ -55,8 +71,8 @@ export function addLayer(data, props) {
 
   // map.on("load", () => map.addLayer(cartoLayer));
   // map.addLayer(cartoLayer);
-  cartoLayer.addTo(map);
+  // cartoLayer.addTo(map);
   // end
-  });
-  // return cartoLayer;
-}
+  // });
+  return cartoLayer;
+};
