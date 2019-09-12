@@ -26,3 +26,13 @@ add_layer <- function(map, data, viz_def = list(), id = "layer", ...) {
   )
   invoke_method(map, "addLayer", data, props)
 }
+
+#' @export
+add_external_geojson_layer <- function(map, source, viz_def = list(), id = "external-layer", popup = FALSE) {
+  props <- list(
+    id = id,
+    vizDef = viz_def,
+    popup = popup
+  )
+  invoke_method(map, "addExternalLayer", source, props)
+}

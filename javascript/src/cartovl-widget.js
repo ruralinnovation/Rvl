@@ -1,11 +1,12 @@
 import backgroundStyle from "./background-style";
-import { addMapboxSource, addMapboxLayer, addLayer } from "./layer";
+import { addMapboxSource, addMapboxLayer, addLayer, addExternalLayer } from "./layer";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
 // TODO: methods do not need to global
 const methods = _cartoVLWidget.methods = {
   addLayer: addLayer,
+  addExternalLayer: addExternalLayer,
   addMapboxSource: addMapboxSource,
   addMapboxLayer: addMapboxLayer
 };

@@ -32,6 +32,15 @@ export function addLayer(data, props) {
   });
 }
 
+export function addExternalLayer(source, props) {
+  let map = this;
+  fetch(source)
+    .then(response => response.json())
+    .then(data => {
+      makeLayer(map, data, props).addTo(map);
+    });
+}
+
 const makeLayer = function(map, data, props) {
   const source = new carto.source.GeoJSON(data);
   const viz = new carto.Viz(props.vizDef.join("\n"));
