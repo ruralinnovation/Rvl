@@ -15,6 +15,7 @@ map_properties <- function(
   )
 }
 
+### TODO: Add 'bearing' and 'pitch'
 #' Set the view of the map
 #'
 #' @inheritParams add_layer
