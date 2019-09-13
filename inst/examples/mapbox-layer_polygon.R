@@ -10,4 +10,4 @@ polygon_style <- list(
 cartovl() %>%
   set_view(-79.89042, 35.23582, 6) %>%
   add_source(nc_geojson, "nc") %>%
-  add_mapbox_layer("nc", style_polygon)
+  add_mapbox_layer("nc", polygon_style)

@@ -1,19 +1,16 @@
-#' Create a cartovl (map) widget
+#' Create a mapbox-gl / carto-vl (map) widget
 #'
 #' @param properties properties passed to \code{mapboxgl.Map}
 #' @param width width of the widget
 #' @param height height of the widget
 #' @param element_id explicit element id (usually not needed)
-#'
 #' @import htmlwidgets
-#'
 #' @export
 cartovl <- function(properties = map_properties(), width = NULL, height = NULL, element_id = NULL) {
 
   # forward options using x
   x <- list(
     mapProperties = properties,
-    layers = list(),
     calls = list()
   )
 

@@ -1,23 +1,19 @@
 import backgroundStyle from "./background-style";
-import makeLayers from "./make-layers";
+import { addMapboxSource, addMapboxLayer, addLayer, addExternalLayer } from "./layer";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
-const methods = {};
+// TODO: methods do not need to global
+const methods = _cartoVLWidget.methods = {
+  addLayer: addLayer,
+  addExternalLayer: addExternalLayer,
+  addMapboxSource: addMapboxSource,
+  addMapboxLayer: addMapboxLayer
+};
 
 methods.addControl = function(className, props, position) {
   let map = this;
   map.addControl(new mapboxgl[className](props), position || "top-left");
-};
-
-methods.addMapboxSource = function(data, id) {
-  let map = this;
-  map.on("load", () => map.addSource(id, { type: "geojson", data: data }));
-};
-
-methods.addMapboxLayer = function(style) {
-  let map = this;
-  map.on("load", () => map.addLayer(style));
 };
 
 export default function(widgetElement, width, height) {
@@ -30,10 +26,7 @@ export default function(widgetElement, width, height) {
     logVersions();
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
-    const layers = _cartoVLWidget.layers = makeLayers(map, widgetData.layers);
-
-    // TODO: add layers in 'makeLayers' func
-    layers.forEach(layer => layer.addTo(map));
+    map.on("idle", () => console.log("ready"));
 
     // call methods
     widgetData.calls.forEach(call => methods[call.name].apply(map, call.args));
