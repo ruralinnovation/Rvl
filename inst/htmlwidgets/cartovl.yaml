@@ -4,6 +4,7 @@ dependencies:
     version: 1.4.1
     src: htmlwidgets/lib/carto-vl
     script: carto-vl.min.js
+    stylesheet: cartovl-bindings.css
   - name: mapbox-gl
     version: 1.0.0
     src: htmlwidgets/lib/mapbox-gl

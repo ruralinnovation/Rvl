@@ -1,5 +1,6 @@
 import backgroundStyle from "./background-style";
 import { addMapboxSource, addMapboxLayer, addLayer, addExternalLayer } from "./layer";
+import addBox from "./box";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
 
@@ -8,7 +9,8 @@ const methods = _cartoVLWidget.methods = {
   addLayer: addLayer,
   addExternalLayer: addExternalLayer,
   addMapboxSource: addMapboxSource,
-  addMapboxLayer: addMapboxLayer
+  addMapboxLayer: addMapboxLayer,
+  addBox: addBox
 };
 
 methods.addControl = function(className, props, position) {
