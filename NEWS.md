@@ -1,3 +1,9 @@
+# cartovl 0.3.0
+
+* Added support for data sources which can be used in multiple layers
+* Added support for layers conforming to the _mapbox style specification_
+* Added support for external geojson data sources
+
 # cartovl 0.2.0
 
 * Added support for _popups_
