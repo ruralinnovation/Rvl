@@ -26,6 +26,7 @@ export default function(widgetElement, width, height) {
     logVersions();
     mapboxgl.accessToken = widgetData.mapProperties.mapboxAccessToken;
     map = _cartoVLWidget.map = makeMap(widgetElement.id, widgetData.mapProperties);
+    map.on("idle", () => console.log("ready"));
 
     // call methods
     widgetData.calls.forEach(call => methods[call.name].apply(map, call.args));

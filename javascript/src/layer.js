@@ -38,6 +38,7 @@ export function addExternalLayer(source, props) {
     .then(response => response.json())
     .then(data => {
       makeLayer(map, data, props).addTo(map);
+      // map.on("load", () => map.addLayer(makeLayer(map, data, props)));
     });
 }
 
