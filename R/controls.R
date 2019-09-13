@@ -5,12 +5,7 @@
 #' @param position position on the map
 #' @param ... options passed to the control
 #' @export
+#' @export
 add_control <- function(map, name = "NavigationControl", position = "top-left", ...) {
-  n <- length(map$x$controls)
-  map$x$controls[[n + 1]] <- list(
-    name = name,
-    props = list(...),
-    position = position
-  )
-  map
+  invoke_method(map, "addControl", name, list(...), position)
 }
