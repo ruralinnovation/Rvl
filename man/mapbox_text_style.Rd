@@ -11,7 +11,7 @@ mapbox_text_style(text_field, text_color = "white", text_size = 10)
 
 \item{text_color}{The color with which the text will be drawn.}
 
-\item{text-size}{The size with which the text will be drawn. Units are in pixels.}
+\item{text_size}{The size with which the text will be drawn. Units are in pixels.}
 }
 \description{
 Make a mapbox text style
