@@ -12,7 +12,7 @@ persons <- data_url %>%
   jsonlite::read_json(simplifyVector = TRUE) %>%
   as_tibble() %>%
   set_names(c("lng", "lat", "sex")) %>%
-  dplyr::mutate(sex = ifelse(sex == 1, "m", "f"))
+  dplyr::mutate(sex = ifelse(sex == 1, "male", "female"))
 
 # persons$sex <- ifelse(persons$sex == 1, "m", "f")
 
@@ -23,5 +23,6 @@ cartovl() %>%
   add_layer(
     # data = persons_geojson,
     data = persons,
-    viz_def = list("color: ramp(buckets($sex, ['m', 'f']), [red, blue])")
+    viz_def = list("color: ramp(buckets($sex, ['male', 'female']), [red, blue])"),
+    legend = TRUE
   )

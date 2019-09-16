@@ -1,4 +1,5 @@
 import df2geojson from "./helpers/df2geojson";
+import addBox from "./box";
 
 const makePopupContent = function(feature) {
   const keys = Object.keys(feature.variables);
@@ -63,6 +64,21 @@ const makeLayer = function(map, data, props) {
         .setLngLat([coords.lng, coords.lat])
         .setHTML(html.join("\n"))
         .addTo(map);
+    });
+  }
+
+  if (props.legend) {
+    cartoLayer.on("loaded", () => {
+      const legendData = cartoLayer.viz.color.getLegendData();
+      const items = legendData.data.map(item => {
+        const color = item.value;
+        const rgba = `rgba(${color.r}, ${color.g}, ${color.b}, ${color.a})`;
+		    const key = (item.key instanceof Array) ? `${item.key[0]} - ${item.key[1]}` : item.key;
+		    return `<li><span class="point-mark" style="background-color:${rgba};border: 1px solid black;"></span> <span>${key}</span></li>`;
+    });
+    const legendTitle = props.legend.title ? `<h1>${props.legend.title}</h1>` : "";
+    const legendContent = legendTitle + `<ul>${items.join("\n")}</ul>`;
+    addBox.call(map, legendContent);
     });
   }
 
