@@ -28,23 +28,25 @@ export function addLayer(data, props) {
       data = map.getSource(data)._data;
     }
 
-    const layer = makeLayer(map, data, props);
+    const source = new carto.source.GeoJSON(data);
+    const layer = makeLayer(map, source, props);
     layer.addTo(map);
   });
 }
 
-export function addExternalLayer(source, props) {
+export function addExternalLayer(url, props) {
   let map = this;
-  fetch(source)
+  fetch(url)
     .then(response => response.json())
     .then(data => {
-      makeLayer(map, data, props).addTo(map);
-      // map.on("load", () => map.addLayer(makeLayer(map, data, props)));
+      const source = new carto.source.GeoJSON(data);
+      makeLayer(map, source, props).addTo(map);
+      // map.on("load", () => map.addLayer(makeLayer(map, source, props)));
     });
 }
 
-const makeLayer = function(map, data, props) {
-  const source = new carto.source.GeoJSON(data);
+const makeLayer = function(map, source, props) {
+  // const source = new carto.source.GeoJSON(data);
   const viz = new carto.Viz(props.vizDef.join("\n"));
   const cartoLayer = new carto.Layer(props.id, source, viz);
 
