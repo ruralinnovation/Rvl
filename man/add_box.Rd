@@ -11,7 +11,7 @@ add_box(map, content, position = "top-right")
 
 \item{content}{The text which will be displayed on the map}
 
-\item{postition}{position on the map}
+\item{position}{position on the map}
 }
 \description{
 Add a (text) box to the map
