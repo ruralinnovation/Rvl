@@ -45,6 +45,12 @@ export function addExternalLayer(url, props) {
     });
 }
 
+export function addDatasetLayer(name, props) {
+  const map = this;
+  const source = new carto.source.Dataset(name);
+  makeLayer(map, source, props).addTo(map);
+}
+
 const makeLayer = function(map, source, props) {
   // const source = new carto.source.GeoJSON(data);
   const viz = new carto.Viz(props.vizDef.join("\n"));
