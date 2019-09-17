@@ -1,8 +1,9 @@
-export default function(html) {
-  let map = this;
-  let widgetElement = map.getContainer();
-  let boxElement = document.createElement("div");
-  boxElement.className = "map-overlay";
-  boxElement.innerHTML = html;
+export default function(content, position) {
+  const map = this;
+  const widgetElement = map.getContainer();
+  const boxElement = document.createElement("div");
+  // boxElement.className = "map-overlay";
+  boxElement.className = `box box-${position || "top-right"}`;
+  boxElement.innerHTML = content;
   widgetElement.appendChild(boxElement);
 }

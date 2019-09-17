@@ -19,14 +19,27 @@
   display: inline-block;
 }
 
-.map-overlay  ul {
+.map-overlay, .box  ul {
   padding: 0;
   margin-bottom: 0;
 }
 
-.map-overlay li {
+.map-overlay, .box li {
   list-style-type: none;
   margin: 0 0 8px 0;
   display: flex;
   vertical-align: middle;
 }
+
+/*
+.box-top-left,
+.box-top-right,
+.box-bottom-left,
+.box-bottom-right { position: absolute; pointer-events: none; z-index: 2; }
+*/
+.box { position: absolute; pointer-events: none; z-index: 2; background: #FFFFFF;
+  border-radius: 4px; padding: 16px; font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif; }
+.box-top-left     { top: 10px; left: 10px; }
+.box-top-right    { top: 10px; right: 10px; }
+.box-bottom-left  { bottom: 10px; left: 10px; }
+.box-bottom-right { right: 10px; bottom: 10px; }

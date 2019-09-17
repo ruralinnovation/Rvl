@@ -1,8 +1,9 @@
-#' Add a box to the map
+#' Add a (text) box to the map
 #'
 #' @inheritParams add_layer
-#' @param html The text which will be displayed on the map
+#' @param content The text which will be displayed on the map
+#' @param postition position on the map
 #' @export
-add_box <- function(map, html) {
-  invoke_method(map, "addBox", html)
+add_box <- function(map, content, position = "top-right") {
+  invoke_method(map, "addBox", content, position)
 }

@@ -20,6 +20,7 @@ persons <- data_url %>%
 
 cartovl() %>%
   set_view(-73.985130, 40.758896, 11) %>%
+  add_control() %>%
   add_layer(
     # data = persons_geojson,
     data = persons,

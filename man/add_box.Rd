@@ -2,15 +2,17 @@
 % Please edit documentation in R/box.R
 \name{add_box}
 \alias{add_box}
-\title{Add a box to the map}
+\title{Add a (text) box to the map}
 \usage{
-add_box(map, html)
+add_box(map, content, position = "top-right")
 }
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
 
-\item{html}{The text which will be displayed on the map}
+\item{content}{The text which will be displayed on the map}
+
+\item{postition}{position on the map}
 }
 \description{
-Add a box to the map
+Add a (text) box to the map
 }
