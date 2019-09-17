@@ -1,5 +1,5 @@
 import backgroundStyle from "./background-style";
-import { addMapboxSource, addMapboxLayer, addLayer, addExternalLayer } from "./layer";
+import { addMapboxSource, addMapboxLayer, addLayer, addExternalLayer, addDatasetLayer } from "./layer";
 import addBox from "./box";
 
 const _cartoVLWidget = global._cartoVLWidget = {};
@@ -10,6 +10,7 @@ const methods = _cartoVLWidget.methods = {
   addExternalLayer: addExternalLayer,
   addMapboxSource: addMapboxSource,
   addMapboxLayer: addMapboxLayer,
+  addDatasetLayer: addDatasetLayer,
   addBox: addBox
 };
 
@@ -17,6 +18,8 @@ methods.addControl = function(className, props, position) {
   let map = this;
   map.addControl(new mapboxgl[className](props), position || "top-left");
 };
+
+methods.setDefaultAuth = carto.setDefaultAuth;
 
 export default function(widgetElement, width, height) {
   const widget = {};
