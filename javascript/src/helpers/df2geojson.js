@@ -9,7 +9,7 @@ export default function(data, props) {
   const keys = Object.keys(data).filter(key => key != longitude && key != latitude);
   const n = data[firstKey].length;
   for (let i = 0; i < n; i++) {
-    let feature = {
+    const feature = {
       type: "Feature",
       geometry: {
         type: "Point",
