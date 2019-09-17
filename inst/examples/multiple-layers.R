@@ -15,6 +15,7 @@ data_url <- "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/e
 us_states <- geojsonio::geojson_json(spData::us_states)
 
 map <- cartovl() %>%
+  add_carto_basemap("darkmatter") %>%
   add_control() %>%
   add_source(us_states, "us_states") %>%
   set_view(-100, 38, 3) %>%
