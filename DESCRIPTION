@@ -1,7 +1,7 @@
 Package: cartovl
 Title: An R Interface to 'carto-vl'
-Version: 0.3.0
-Date: 2019-09-13
+Version: 0.4.0
+Date: 2019-09-17
 Authors@R: person("Stefan", "Kuethe", email = "crazycapivara@gmail.com", role = c("aut", "cre"))
 Maintainer: Stefan Kuethe <crazycapivara@gmail.com>
 Description: Makes 'carto-vl' <https://carto.com/developers/carto-vl/>, an open source JavaScript library
