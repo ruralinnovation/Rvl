@@ -4,7 +4,7 @@
 \alias{cartovl}
 \title{Create a mapbox-gl / carto-vl (map) widget}
 \usage{
-cartovl(properties = map_properties(), width = NULL, height = NULL,
+cartovl(properties = list(), width = NULL, height = NULL,
   element_id = NULL)
 }
 \arguments{

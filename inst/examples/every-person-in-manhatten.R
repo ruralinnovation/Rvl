@@ -18,7 +18,8 @@ persons <- data_url %>%
 
 # persons_geojson <- geojsonio::geojson_json(persons)
 
-cartovl() %>%
+map <- cartovl() %>%
+  add_carto_basemap() %>%
   set_view(-73.985130, 40.758896, 11) %>%
   add_control() %>%
   add_layer(
@@ -27,3 +28,5 @@ cartovl() %>%
     viz_def = list("color: ramp(buckets($sex, ['male', 'female']), [red, blue])"),
     legend = TRUE
   )
+
+if (interactive()) map

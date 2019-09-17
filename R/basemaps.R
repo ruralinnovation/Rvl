@@ -8,15 +8,17 @@ add_mapbox_basemap <- function(map, token = Sys.getenv("MAPBOX_API_TOKEN"), styl
   modify_map_parameters(map, style = style, mapboxAccessToken = token)
 }
 
-#' Add a base map from carto to the map widget
+#' Add a base map from CARTO to the map widget
 #'
 #' @inheritParams add_mapbox_basemap
-#' @param style map style, one of \code{darkmatter}, \code{positron} or \code{voyager}
+#' @param style_name map style, one of \code{darkmatter}, \code{positron} or \code{voyager}
 #' @export
-add_carto_basemap <- function(map, style = "darkmatter") {
-  modify_map_parameters(map, style = CARTO_BASEMAPS[[style]])
+add_carto_basemap <- function(map, style_name = "darkmatter") {
+  # modify_map_parameters(map, style = CARTO_BASEMAPS[[style]])
+  modify_map_parameters(map, cartoStyle = style_name)
 }
 
+### TODO: obsolete
 CARTO_BASEMAPS <- list(
   darkmatter = htmlwidgets::JS("carto.basemaps.darkmatter"),
   positron = htmlwidgets::JS("carto.basemaps.positron"),

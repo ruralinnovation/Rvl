@@ -6,7 +6,7 @@
 #' @param element_id explicit element id (usually not needed)
 #' @import htmlwidgets
 #' @export
-cartovl <- function(properties = map_properties(), width = NULL, height = NULL, element_id = NULL) {
+cartovl <- function(properties = list(), width = NULL, height = NULL, element_id = NULL) {
 
   # forward options using x
   x <- list(
