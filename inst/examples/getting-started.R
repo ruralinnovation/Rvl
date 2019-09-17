@@ -12,6 +12,7 @@ viz_def <- list(
 
 map <- cartovl() %>%
   set_view(176.9, -24.655, 2) %>%
-  add_layer(sample_data, viz_def, popup = TRUE)
+  add_layer(sample_data, viz_def, popup = TRUE) %>%
+  add_box("<h1>quakes</h1>")
 
 if (interactive()) map
