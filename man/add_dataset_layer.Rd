@@ -10,7 +10,7 @@ add_dataset_layer(map, dataset_name, viz_def = list(),
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
 
-\item{dataset_name}{name of the dataset which will be add to the map}
+\item{dataset_name}{name of the dataset which will be added to the map}
 
 \item{viz_def}{visualization definition, character vector; if set to \code{NULL}
 a default style will be applied}

@@ -15,7 +15,7 @@ set_default_auth <- function(map, user_name = "cartovl", api_key = "default_publ
 #' Add a (CARTO) dataset layer to the map
 #'
 #' @inheritParams add_layer
-#' @param dataset_name name of the dataset which will be add to the map
+#' @param dataset_name name of the dataset which will be added to the map
 #' @export
 add_dataset_layer <- function(map, dataset_name, viz_def = list(), id = "dataset-layer", ...) {
   props <- list(

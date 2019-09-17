@@ -5,7 +5,6 @@
 #' @param position position on the map
 #' @param ... options passed to the control
 #' @export
-#' @export
 add_control <- function(map, name = "NavigationControl", position = "top-left", ...) {
   invoke_method(map, "addControl", name, list(...), position)
 }
