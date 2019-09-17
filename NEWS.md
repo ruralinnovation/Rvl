@@ -1,7 +1,7 @@
 # cartovl 0.4.0
 
 * Added support for _legends_ and _text boxes_
-* Added support CARTO datasets
+* Added support for CARTO datasets
 
 # cartovl 0.3.0
 
