@@ -2,19 +2,24 @@
 % Please edit documentation in R/map-properties.R
 \name{map_properties}
 \alias{map_properties}
-\title{Map properties}
+\title{Map properties / options}
 \usage{
-
-  map_properties(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
-  center = c(0, 0), zoom = 2)
+map_properties(style = NULL, min_zoom = NULL, max_zoom = NULL,
+  center = c(0, 0), zoom = 2, ...)
 }
 \arguments{
-\item{style}{basemap style}
+\item{style}{The mapbox style of the map.}
 
-\item{center}{longitude, latitude}
+\item{min_zoom}{The minimum zoom level of the map (0-24).}
 
-\item{zoom}{zoom}
+\item{max_zoom}{The maximum zoom level of the map (0-24).}
+
+\item{center}{The inital geographical centerpoint of the map (longitude, latitude coordinate order).}
+
+\item{zoom}{The initial zoom level of the map.}
+
+\item{...}{more properties, see \href{https://docs.mapbox.com/mapbox-gl-js/api/}{mabox-gl API reference}}
 }
 \description{
-Map properties
+Map properties / options
 }

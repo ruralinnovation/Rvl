@@ -1,18 +1,29 @@
-#' Map properties
+## TODO: rename to 'map_options'!?
+#' Map properties / options
 #'
-#' @param style basemap style
-#' @param center longitude, latitude
-#' @param zoom zoom
+#' @param style The mapbox style of the map.
+#' @param min_zoom The minimum zoom level of the map (0-24).
+#' @param max_zoom The maximum zoom level of the map (0-24).
+#' @param center The inital geographical centerpoint of the map (longitude, latitude coordinate order).
+#' @param zoom The initial zoom level of the map.
+#' @param ... more properties, see \href{https://docs.mapbox.com/mapbox-gl-js/api/}{mabox-gl API reference}
 #' @export
 map_properties <- function(
-  style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  style = NULL,
+  min_zoom = NULL,
+  max_zoom = NULL,
   center = c(0, 0),
-  zoom = 2) {
-  list(
+  zoom = 2,
+  ...) {
+  props <- list(
     style = style,
+    minZoom = min_zoom,
+    maxZoom = max_zoom,
     center = center,
-    zoom = zoom
+    zoom = zoom,
+    ...
   )
+  props[lengths(props) != 0]
 }
 
 #' Set the view of the map
