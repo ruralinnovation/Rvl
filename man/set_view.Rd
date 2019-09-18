@@ -4,16 +4,20 @@
 \alias{set_view}
 \title{Set the view of the map}
 \usage{
-set_view(map, longitude, latitude, zoom = 2)
+set_view(map, longitude, latitude, zoom = 2, pitch = 0, bearing = 0)
 }
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
 
-\item{longitude}{longitude}
+\item{longitude}{The longitude of the geographical centerpoint of the map.}
 
-\item{latitude}{latitude}
+\item{latitude}{The latitude of the  geographical centerpoint of the map.}
 
-\item{zoom}{zoom}
+\item{zoom}{The zoom level of the map.}
+
+\item{pitch}{The pitch (tilt) of the map, measured in degrees away from the plane of the screen (0 - 60).}
+
+\item{bearing}{The bearing (rotation) of the map, measured in degrees counter-clockwise from north.}
 }
 \description{
 Set the view of the map
