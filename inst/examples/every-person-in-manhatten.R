@@ -21,7 +21,7 @@ map <- cartovl() %>%
   add_layer(
     data = persons,
     viz_def = list("color: ramp(buckets($sex, ['male', 'female']), [red, blue])"),
-    legend = list(style = "color: white; background: #2b2d2f;")
+    legend = TRUE # list(style = "color: white; background: #2b2d2f;")
   )
 
 if (interactive()) map
