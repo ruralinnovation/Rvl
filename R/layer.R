@@ -1,3 +1,4 @@
+## TODO: Obsolete, remove!
 add_layer_ <- function(map, data, viz_def = list(), id = "layer", ...) {
   n <- length(map$x$layers)
   map$x$layers[[n + 1]] <- list(
