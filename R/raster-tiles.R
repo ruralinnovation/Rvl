@@ -1,5 +1,6 @@
 #' Add raster tiles to the map
 #'
+#' @inheritParams add_layer
 #' @param tiles tile sources
 #' @param attribution attribution
 #' @export

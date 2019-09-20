@@ -7,6 +7,8 @@
 add_raster_tiles(map, tiles = NULL, attribution = NULL)
 }
 \arguments{
+\item{map}{map widget created by \link{cartovl}}
+
 \item{tiles}{tile sources}
 
 \item{attribution}{attribution}
