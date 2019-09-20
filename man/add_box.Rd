@@ -4,7 +4,7 @@
 \alias{add_box}
 \title{Add a (text) box to the map}
 \usage{
-add_box(map, content, position = "top-right", ...)
+add_box(map, content, position = "top-right", style = "")
 }
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
@@ -13,7 +13,7 @@ add_box(map, content, position = "top-right", ...)
 
 \item{position}{The position on the map.}
 
-\item{...}{CSS options applied to the element.}
+\item{style}{CSS options in the form of \emph{cssText} applied to the element.}
 }
 \description{
 Add a (text) box to the map

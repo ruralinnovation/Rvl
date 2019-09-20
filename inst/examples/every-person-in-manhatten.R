@@ -14,19 +14,14 @@ persons <- data_url %>%
   set_names(c("lng", "lat", "sex")) %>%
   dplyr::mutate(sex = ifelse(sex == 1, "male", "female"))
 
-# persons$sex <- ifelse(persons$sex == 1, "m", "f")
-
-# persons_geojson <- geojsonio::geojson_json(persons)
-
 map <- cartovl() %>%
   add_carto_basemap() %>%
   set_view(-73.985130, 40.758896, 11) %>%
   add_control() %>%
   add_layer(
-    # data = persons_geojson,
     data = persons,
     viz_def = list("color: ramp(buckets($sex, ['male', 'female']), [red, blue])"),
-    legend = TRUE
+    legend = list(style = "color: white; background: #2b2d2f;")
   )
 
 if (interactive()) map

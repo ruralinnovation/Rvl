@@ -86,7 +86,7 @@ const makeLayer = function(map, source, props) {
     });
     const legendTitle = props.legend.title ? `<h1>${props.legend.title}</h1>` : "";
     const legendContent = legendTitle + `<ul>${items.join("\n")}</ul>`;
-    addBox.call(map, legendContent, props.legend.position);
+    addBox.call(map, legendContent, props.legend.position, props.legend.style);
     });
   }
 
