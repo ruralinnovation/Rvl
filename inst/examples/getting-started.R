@@ -11,6 +11,7 @@ viz_def <- list(
 )
 
 map <- cartovl() %>%
+  add_raster_tiles() %>%
   set_view(176.9, -24.655, 2) %>%
   add_layer(sample_data, viz_def, popup = TRUE) %>%
   add_box("<h1>quakes</h1>")
