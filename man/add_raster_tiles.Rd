@@ -9,9 +9,10 @@ add_raster_tiles(map, tiles = NULL, attribution = NULL)
 \arguments{
 \item{map}{map widget created by \link{cartovl}}
 
-\item{tiles}{tile sources}
+\item{tiles}{A vector of one or more tile source URLs,
+e. g. \code{https://stamen-tiles.a.ssl.fastly.net/watercolor/{z}/{x}/{y}.jpg}}
 
-\item{attribution}{attribution}
+\item{attribution}{The attribution which will be displayed on the map.}
 }
 \description{
 Add raster tiles to the map
