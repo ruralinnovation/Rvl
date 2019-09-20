@@ -10,9 +10,9 @@ map_properties(style = NULL, min_zoom = NULL, max_zoom = NULL,
 \arguments{
 \item{style}{The mapbox style of the map.}
 
-\item{min_zoom}{The minimum zoom level of the map (0-24).}
+\item{min_zoom}{The minimum zoom level of the map (0 - 24).}
 
-\item{max_zoom}{The maximum zoom level of the map (0-24).}
+\item{max_zoom}{The maximum zoom level of the map (0 - 24).}
 
 \item{center}{The inital geographical centerpoint of the map (longitude, latitude coordinate order).}
 
@@ -21,5 +21,6 @@ map_properties(style = NULL, min_zoom = NULL, max_zoom = NULL,
 \item{...}{more properties, see \href{https://docs.mapbox.com/mapbox-gl-js/api/}{mabox-gl API reference}}
 }
 \description{
-Map properties / options
+Properties like \code{center} or \code{zoom} are usually set via \link{set_view}.
+The \code{style} can be set by functions like \link{add_carto_basemap} and others.
 }
