@@ -5,6 +5,8 @@
 #' @param id The id of the source to add.
 #' @export
 add_source <- function(map, data, id = "source", ...) {
+  if (inherits(data, "sf")) data <- geojsonsf::sf_geojson(data)
+
   props <- list(
     id = id,
     df = inherits(data, "data.frame"),
