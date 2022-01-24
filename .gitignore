@@ -1,4 +1,6 @@
-.Rhistory
 .RData
+.Rhistory
+.Rprofile
 .Rproj.user
 node_modules/
+packrat/lib*/
