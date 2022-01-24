@@ -3,4 +3,4 @@
 .Rprofile
 .Rproj.user
 node_modules/
-packrat/lib*/
+packrat/*
