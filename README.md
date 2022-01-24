@@ -20,7 +20,7 @@ You can install the latest version of cartovl from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("crazycapivara/cartovl")
+devtools::install_github("ruralinnovation/rvl")
 ```
 
 Example
