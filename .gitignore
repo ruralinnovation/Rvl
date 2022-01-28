@@ -2,6 +2,7 @@
 .Rhistory
 .Rprofile
 .Rproj.user
+*.Rproj*
 node_modules/
 packrat/*
 packrat/lib*/
