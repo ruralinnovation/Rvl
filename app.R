@@ -1,6 +1,6 @@
 library(sf)
 library(geojsonio)
-library(cartovl)
+library(rvl)
 
 data_url <- paste0(
   "https://raw.githubusercontent.com/uber-common/deck.gl-data/",
@@ -14,11 +14,11 @@ viz_def <- list(
   "color: ramp($growth, [red, green, yellow])"
 )
 
-map <- cartovl() %>%
+map <- rvl::cartovl() %>%
   set_view(latitude = 49.254, longitude = -123.13, zoom = 11) %>%
   add_layer(blocks, viz_def)
 
-map <- cartovl() %>%
+map <- rvl::cartovl() %>%
   set_view(latitude = 49.254, longitude = -123.13, zoom = 11) %>%
   add_external_geojson_layer(data_url, viz_def)
 

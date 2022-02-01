@@ -1,14 +1,14 @@
-Package: cartovl
+Package: rvl
 Title: An R Interface to 'carto-vl'
-Version: 0.4.0
-Date: 2019-09-17
-Authors@R: person("Stefan", "Kuethe", email = "crazycapivara@gmail.com", role = c("aut", "cre"))
-Maintainer: Stefan Kuethe <crazycapivara@gmail.com>
+Version: 1.0.0
+Date: 2022-02-01
+Authors@R: person("Hall", "John", email = "john.hall@ruralinnovation.us", role = c("aut", "cre"))
+Maintainer: John Hall <john.hall@ruralinnovation.us>
 Description: Makes 'carto-vl' <https://carto.com/developers/carto-vl/>, an open source JavaScript library
   to create vector-based visualizations on top of mapbox-gl <https://docs.mapbox.com/mapbox-gl-js/api/>,
   available within R via the 'htmlwidgets' package.
-URL: https://github.com/crazycapivara/cartovl/
-BugReports: https://github.com/crazycapivara/cartovl/issues/
+URL: https://github.com/ruralinnovation/rvl/
+BugReports: https://github.com/ruralinnovation/rvl/issues/
 License: MIT + file LICENSE
 Imports:
   htmlwidgets,

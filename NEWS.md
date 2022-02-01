@@ -1,3 +1,8 @@
+# rvl 1.0.0
+
+* Change namespace to rvl for use in CORI/RISI projects
+* Begin to migrate CORI/RISI functions from shinymaptool
+
 # cartovl 0.4.0
 
 * Added support for _legends_ and _text boxes_

@@ -7,7 +7,7 @@
 add_mapbox_layer(map, source_id, style, id = "mapbox-layer")
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{rvl}}
 
 \item{source_id}{The id of the source to get data from.}
 

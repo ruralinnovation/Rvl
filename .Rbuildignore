@@ -1,11 +1,10 @@
-^.*.R
+^\.Rprofile$
+^\.Rproj\.user$
+^app\.R%
 ^renv$
 ^renv\.lock$
 ^\.travis\.yml$
 ^README\.Rmd$
 ^LICENSE\.md$
-^cartovl\.Rproj$
-^\.Rproj\.user$
+^rvl\.Rproj$
 ^javascript$
-^packrat/
-^\.Rprofile$
