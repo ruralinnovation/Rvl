@@ -22,7 +22,7 @@ Cartovl for R makes [carto-vl](https://carto.com/developers/carto-vl/), an open 
 ## Notes
 
 * The package development is in an early state.
-* Please check the [examples](https://github.com/crazycapivara/cartovl/tree/master/inst/examples) as a starting point.
+* Please check the [examples](https://github.com/ruralinnovation/rvl/tree/master/inst/examples) as a starting point.
 
 ## Installation
 
@@ -30,7 +30,7 @@ You can install the latest version of cartovl from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-devtools::install_github("crazycapivara/cartovl")
+devtools::install_github("ruralinnovation/rvl")
 ```
 
 ## Example
@@ -38,7 +38,7 @@ devtools::install_github("crazycapivara/cartovl")
 ```{r example, eval = FALSE}
 library(sf)
 library(geojsonio)
-library(cartovl)
+library(rvl)
 
 nc_geojson <- system.file("shape/nc.shp", package = "sf") %>%
   st_read() %>%

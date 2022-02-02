@@ -7,7 +7,7 @@
 set_view(map, longitude, latitude, zoom = 2)
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{rvl}}
 
 \item{longitude}{longitude}
 

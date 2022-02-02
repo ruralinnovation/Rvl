@@ -4,7 +4,7 @@
     "Repositories": [
       {
         "Name": "MRAN",
-        "URL": "https://mran.microsoft.com/snapshot/2020-04-24"
+        "URL": "https://mran.microsoft.com/snapshot/2022-01-25"
       },
       {
         "Name": "CRAN",
@@ -89,6 +89,12 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "3338d4a9b1352f5a613e2bdcefe784ea"
+    },
+    "cartovl": {
+      "Package": "cartovl",
+      "Version": "0.4.0",
+      "Source": "unknown",
+      "Hash": "ef75fbee1b6a8b666882996c4dc14baf"
     },
     "class": {
       "Package": "class",
@@ -412,6 +418,13 @@
       "Repository": "CRAN",
       "Hash": "88b9f48c93d17cdb811b54079a6a414f"
     },
+    "raster": {
+      "Package": "raster",
+      "Version": "3.5-15",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "70cf51235e017702ed77427797572ef0"
+    },
     "readr": {
       "Package": "readr",
       "Version": "2.1.1",
@@ -468,6 +481,13 @@
       "Repository": "CRAN",
       "Hash": "ce8613f4e8c84ef4da9eba65b874ebe9"
     },
+    "spData": {
+      "Package": "spData",
+      "Version": "2.0.1",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "5d68152962bb57448336effdcf598d0a"
+    },
     "stringi": {
       "Package": "stringi",
       "Version": "1.4.6",
@@ -481,6 +501,13 @@
       "Source": "Repository",
       "Repository": "CRAN",
       "Hash": "0759e6b6c0957edb1311028a49a35e76"
+    },
+    "terra": {
+      "Package": "terra",
+      "Version": "1.5-17",
+      "Source": "Repository",
+      "Repository": "CRAN",
+      "Hash": "6c9f036bad848c41d12be5071b72fa53"
     },
     "tibble": {
       "Package": "tibble",
