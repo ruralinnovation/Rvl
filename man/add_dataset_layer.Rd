@@ -8,7 +8,7 @@ add_dataset_layer(map, dataset_name, viz_def = list(),
   id = "dataset-layer", ...)
 }
 \arguments{
-\item{map}{map widget created by \link{rvl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{dataset_name}{name of the dataset which will be added to the map}
 

@@ -20,7 +20,7 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
     x,
     width = width,
     height = height,
-    package = "cartovl",
+    package = "Rvl",
     elementId = element_id
   )
 }
@@ -39,18 +39,19 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @name cartovl-shiny
+#' @name rvlOutput
+#' @rdname rvlOutput
 #'
 #' @export
-cartovlOutput <- function(outputId, width = "100%", height = "400px") {
-  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "rvl")
+rvlOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "Rvl")
 }
 
-#' @rdname cartovl-shiny
+#' @rdname renderVL
 #' @export
-renderCartovl <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderVL <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) {
     expr <- substitute(expr)
   } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, cartovlOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, rvlOutput, env, quoted = TRUE)
 }

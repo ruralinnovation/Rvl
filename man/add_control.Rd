@@ -8,7 +8,7 @@ add_control(map, name = "NavigationControl", position = "top-left",
   ...)
 }
 \arguments{
-\item{map}{map widget created by \link{rvl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{name}{name of the control}
 

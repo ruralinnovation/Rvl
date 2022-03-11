@@ -1,4 +1,4 @@
-Package: rvl
+Package: Rvl
 Title: An R Interface to 'carto-vl'
 Version: 1.0.0
 Date: 2022-02-01
@@ -7,8 +7,8 @@ Maintainer: John Hall <john.hall@ruralinnovation.us>
 Description: Makes 'carto-vl' <https://carto.com/developers/carto-vl/>, an open source JavaScript library
   to create vector-based visualizations on top of mapbox-gl <https://docs.mapbox.com/mapbox-gl-js/api/>,
   available within R via the 'htmlwidgets' package.
-URL: https://github.com/ruralinnovation/rvl/
-BugReports: https://github.com/ruralinnovation/rvl/issues/
+URL: https://github.com/ruralinnovation/Rvl/
+BugReports: https://github.com/ruralinnovation/Rvl/issues/
 License: MIT + file LICENSE
 Imports:
   htmlwidgets,

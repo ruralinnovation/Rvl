@@ -1,4 +1,4 @@
-library(cartovl)
+library(Rvl)
 
 source <- "https://libs.cartocdn.com/carto-vl/assets/stations.geojson"
 

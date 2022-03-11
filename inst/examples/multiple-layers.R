@@ -1,4 +1,4 @@
-library(cartovl)
+library(Rvl)
 
 text_style <- list(
   type = "symbol",

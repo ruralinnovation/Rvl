@@ -8,7 +8,7 @@ set_default_auth(map, user_name = "cartovl",
   api_key = "default_public")
 }
 \arguments{
-\item{map}{map widget created by \link{rvl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{user_name}{name of the user}
 

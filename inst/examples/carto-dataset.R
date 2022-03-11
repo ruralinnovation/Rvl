@@ -1,4 +1,4 @@
-library(cartovl)
+library(Rvl)
 
 viz_def <- list(
   "width: 7",

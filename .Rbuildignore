@@ -6,5 +6,5 @@
 ^\.travis\.yml$
 ^README\.Rmd$
 ^LICENSE\.md$
-^rvl\.Rproj$
+^Rvl\.Rproj$
 ^javascript$

@@ -1,6 +1,6 @@
 library(sf)
 library(geojsonio)
-library(cartovl)
+library(Rvl)
 
 nc_geojson <- system.file("shape/nc.shp", package = "sf") %>%
   st_read() %>%

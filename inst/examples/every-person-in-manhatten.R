@@ -1,6 +1,6 @@
 library(magrittr)
 library(tibble)
-library(cartovl)
+library(Rvl)
 
 data_url <- paste0(
   "https://raw.githubusercontent.com/",

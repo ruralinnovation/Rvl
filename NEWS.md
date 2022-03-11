@@ -1,6 +1,6 @@
-# rvl 1.0.0
+# Rvl 1.0.0
 
-* Change namespace to rvl for use in CORI/RISI projects
+* Change namespace to Rvl for use in CORI/RISI projects
 * Begin to migrate CORI/RISI functions from shinymaptool
 
 # cartovl 0.4.0

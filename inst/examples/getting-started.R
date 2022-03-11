@@ -1,5 +1,5 @@
 library(geojsonio)
-library(cartovl)
+library(Rvl)
 
 sample_data <- geojson_json(quakes)
 

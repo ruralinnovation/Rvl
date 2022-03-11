@@ -7,7 +7,7 @@
 add_source(map, data, id = "source", ...)
 }
 \arguments{
-\item{map}{map widget created by \link{rvl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{data}{source object}
 

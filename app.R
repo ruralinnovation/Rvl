@@ -1,6 +1,6 @@
 library(sf)
 library(geojsonio)
-library(cartovl)
+library(Rvl)
 
 data_url <- paste0(
   "https://raw.githubusercontent.com/uber-common/deck.gl-data/",
