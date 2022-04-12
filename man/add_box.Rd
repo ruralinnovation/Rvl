@@ -7,7 +7,7 @@
 add_box(map, content, position = "top-right")
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{content}{The text which will be displayed on the map}
 

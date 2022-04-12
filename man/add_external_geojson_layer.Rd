@@ -8,7 +8,7 @@ add_external_geojson_layer(map, source, viz_def = list(),
   id = "external-layer", ...)
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{source}{url of the geojson data source}
 

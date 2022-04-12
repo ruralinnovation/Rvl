@@ -8,7 +8,7 @@ add_mapbox_basemap(map, token = Sys.getenv("MAPBOX_API_TOKEN"),
   style = "mapbox://styles/mapbox/light-v9")
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{token}{mapbox api access token}
 

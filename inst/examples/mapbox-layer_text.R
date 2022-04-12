@@ -1,4 +1,4 @@
-library(cartovl)
+library(Rvl)
 
 data_geojson <- geojsonio::geojson_json(quakes)
 

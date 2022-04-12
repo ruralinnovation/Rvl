@@ -1,4 +1,6 @@
-library(cartovl)
+library(sf)
+library(geojsonio)
+library(Rvl)
 
 text_style <- list(
   type = "symbol",
@@ -12,14 +14,16 @@ text_style <- list(
 
 data_url <- "https://raw.githubusercontent.com/uber-common/deck.gl-data/master/examples/highway/roads.json"
 
-us_states <- geojsonio::geojson_json(spData::us_states)
+nc_state <- system.file("shape/nc.shp", package = "sf") %>%
+  st_read() %>%
+  geojson_json()
 
 map <- cartovl() %>%
   add_control() %>%
-  add_source(us_states, "us_states") %>%
+  add_source(nc_state, "north_carolina") %>%
   set_view(-100, 38, 3) %>%
   add_layer(
-    "us_states",
+    "north_carolina",
     list(
       "color: opacity(ramp($NAME, vivid), 0.4)"
     ),
@@ -36,7 +40,7 @@ map <- cartovl() %>%
     popup = TRUE
   ) %>%
   add_mapbox_layer(
-    "us_states", text_style, id = "labels"
+    "north_carolina", text_style, id = "labels"
   )
 
 if (interactive()) map

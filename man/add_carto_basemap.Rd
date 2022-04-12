@@ -7,7 +7,7 @@
 add_carto_basemap(map, style = "darkmatter")
 }
 \arguments{
-\item{map}{map widget created by \link{cartovl}}
+\item{map}{map widget created by \link{Rvl}}
 
 \item{style}{map style, one of \code{darkmatter}, \code{positron} or \code{voyager}}
 }

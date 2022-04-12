@@ -20,12 +20,12 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
     x,
     width = width,
     height = height,
-    package = "cartovl",
+    package = "Rvl",
     elementId = element_id
   )
 }
 
-#' Shiny bindings for cartovl
+#' Shiny bindings for carto-vl
 #'
 #' Output and render functions for using cartovl within Shiny
 #' applications and interactive Rmd documents.
@@ -34,23 +34,24 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
 #' @param width,height Must be a valid CSS unit (like \code{'100\%'},
 #'   \code{'400px'}, \code{'auto'}) or a number, which will be coerced to a
 #'   string and have \code{'px'} appended.
-#' @param expr An expression that generates a cartovl
+#' @param expr An expression that generates a carto-vl
 #' @param env The environment in which to evaluate \code{expr}.
 #' @param quoted Is \code{expr} a quoted expression (with \code{quote()})? This
 #'   is useful if you want to save an expression in a variable.
 #'
-#' @name cartovl-shiny
+#' @name rvlOutput
+#' @rdname rvlOutput
 #'
 #' @export
-cartovlOutput <- function(outputId, width = "100%", height = "400px") {
-  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "cartovl")
+rvlOutput <- function(outputId, width = "100%", height = "400px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "Rvl")
 }
 
-#' @rdname cartovl-shiny
+#' @rdname renderVL
 #' @export
-renderCartovl <- function(expr, env = parent.frame(), quoted = FALSE) {
+renderVL <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) {
     expr <- substitute(expr)
   } # force quoted
-  htmlwidgets::shinyRenderWidget(expr, cartovlOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, rvlOutput, env, quoted = TRUE)
 }
