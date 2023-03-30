@@ -1,12 +1,14 @@
 #' Create a mapbox-gl / carto-vl (map) widget
 #'
 #' @param properties properties passed to \code{mapboxgl.Map}
-#' @param width width of the widget
-#' @param height height of the widget
+#' @param width styled width of the widget
+#' @param height styled height of the widget
+#' @param minWidth minimum width
+#' @param minHeight minimum height
 #' @param element_id explicit element id (usually not needed)
 #' @import htmlwidgets
 #' @export
-cartovl <- function(properties = map_properties(), width = NULL, height = NULL, element_id = NULL) {
+cartovl <- function(properties = map_properties(), width = NULL, height = NULL, minWidth = "480px", minHeight = "360px", element_id = NULL) {
 
   # forward options using x
   x <- list(
@@ -21,7 +23,14 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
     width = width,
     height = height,
     package = "Rvl",
-    elementId = element_id
+    elementId = element_id,
+    sizingPolicy = htmlwidgets::sizingPolicy(
+        defaultWidth = minWidth, 
+        defaultHeight = minHeight, 
+        browser.defaultWidth = width,
+        browser.defaultHeight = height, 
+        fill = TRUE
+    )
   )
 }
 
