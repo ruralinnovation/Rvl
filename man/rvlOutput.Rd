@@ -4,7 +4,13 @@
 \alias{rvlOutput}
 \title{Shiny bindings for carto-vl}
 \usage{
-rvlOutput(outputId, width = "100\%", height = "400px")
+rvlOutput(
+  outputId,
+  width = "100\%",
+  height = "100\%",
+  minWidth = "480px",
+  minHeight = "360px"
+)
 }
 \arguments{
 \item{outputId}{output variable to read from}

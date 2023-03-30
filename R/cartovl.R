@@ -25,10 +25,10 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
     package = "Rvl",
     elementId = element_id,
     sizingPolicy = htmlwidgets::sizingPolicy(
-        defaultWidth = minWidth, 
-        defaultHeight = minHeight, 
+        defaultWidth = minWidth,
+        defaultHeight = minHeight,
         browser.defaultWidth = width,
-        browser.defaultHeight = height, 
+        browser.defaultHeight = height,
         fill = TRUE
     )
   )
@@ -52,8 +52,8 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
 #' @rdname rvlOutput
 #'
 #' @export
-rvlOutput <- function(outputId, width = "100%", height = "400px") {
-  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", width, height, package = "Rvl")
+rvlOutput <- function(outputId, width = "100%", height = "100%", minWidth = "480px", minHeight = "360px") {
+  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", fill =TRUE, inline = FALSE, width, height, package = "Rvl")
 }
 
 #' @rdname renderVL
