@@ -54,7 +54,7 @@ cartovl <- function(properties = map_properties(), width = NULL, height = NULL, 
 #'
 #' @export
 rvlOutput <- function(outputId, width = "100%", height = "100%", minWidth = "480px", minHeight = "360px") {
-  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", fill =TRUE, inline = FALSE, width, height, package = "Rvl")
+  htmlwidgets::shinyWidgetOutput(outputId, "cartovl", fill = TRUE, inline = FALSE, width, height, package = "Rvl")
 }
 
 #' Shiny render function
