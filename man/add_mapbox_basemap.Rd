@@ -4,8 +4,11 @@
 \alias{add_mapbox_basemap}
 \title{Add a base map from mapbox to the map widget}
 \usage{
-add_mapbox_basemap(map, token = Sys.getenv("MAPBOX_API_TOKEN"),
-  style = "mapbox://styles/mapbox/light-v9")
+add_mapbox_basemap(
+  map,
+  token = Sys.getenv("MAPBOX_API_TOKEN"),
+  style = "mapbox://styles/mapbox/light-v9"
+)
 }
 \arguments{
 \item{map}{map widget created by \link{Rvl}}

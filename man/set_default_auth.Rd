@@ -4,8 +4,7 @@
 \alias{set_default_auth}
 \title{Set default authentication parameters: user and API key}
 \usage{
-set_default_auth(map, user_name = "cartovl",
-  api_key = "default_public")
+set_default_auth(map, user_name = "cartovl", api_key = "default_public")
 }
 \arguments{
 \item{map}{map widget created by \link{Rvl}}

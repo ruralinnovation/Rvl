@@ -4,15 +4,25 @@
 \alias{cartovl}
 \title{Create a mapbox-gl / carto-vl (map) widget}
 \usage{
-cartovl(properties = map_properties(), width = NULL, height = NULL,
-  element_id = NULL)
+cartovl(
+  properties = map_properties(),
+  width = NULL,
+  height = NULL,
+  minWidth = "480px",
+  minHeight = "360px",
+  element_id = NULL
+)
 }
 \arguments{
 \item{properties}{properties passed to \code{mapboxgl.Map}}
 
-\item{width}{width of the widget}
+\item{width}{styled width of the widget}
 
-\item{height}{height of the widget}
+\item{height}{styled height of the widget}
+
+\item{minWidth}{minimum width}
+
+\item{minHeight}{minimum height}
 
 \item{element_id}{explicit element id (usually not needed)}
 }

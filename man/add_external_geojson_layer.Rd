@@ -4,8 +4,13 @@
 \alias{add_external_geojson_layer}
 \title{Add an external layer to the map}
 \usage{
-add_external_geojson_layer(map, source, viz_def = list(),
-  id = "external-layer", ...)
+add_external_geojson_layer(
+  map,
+  source,
+  viz_def = list(),
+  id = "external-layer",
+  ...
+)
 }
 \arguments{
 \item{map}{map widget created by \link{Rvl}}

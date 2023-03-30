@@ -4,9 +4,11 @@
 \alias{map_properties}
 \title{Map properties}
 \usage{
-
-  map_properties(style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
-  center = c(0, 0), zoom = 2)
+map_properties(
+  style = "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json",
+  center = c(0, 0),
+  zoom = 2
+)
 }
 \arguments{
 \item{style}{basemap style}

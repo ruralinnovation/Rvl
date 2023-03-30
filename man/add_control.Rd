@@ -4,8 +4,7 @@
 \alias{add_control}
 \title{Add a control to the map}
 \usage{
-add_control(map, name = "NavigationControl", position = "top-left",
-  ...)
+add_control(map, name = "NavigationControl", position = "top-left", ...)
 }
 \arguments{
 \item{map}{map widget created by \link{Rvl}}

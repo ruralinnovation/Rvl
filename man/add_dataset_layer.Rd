@@ -4,8 +4,13 @@
 \alias{add_dataset_layer}
 \title{Add a (CARTO) dataset layer to the map}
 \usage{
-add_dataset_layer(map, dataset_name, viz_def = list(),
-  id = "dataset-layer", ...)
+add_dataset_layer(
+  map,
+  dataset_name,
+  viz_def = list(),
+  id = "dataset-layer",
+  ...
+)
 }
 \arguments{
 \item{map}{map widget created by \link{Rvl}}
